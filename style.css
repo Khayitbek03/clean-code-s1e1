@@ -1,86 +1,71 @@
 /* Basic Style */
 .body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
-  }
-  
-  .header {
+    background-color: #f8f8f8; 
+    color: #333; 
+    font-family: "Lato", sans-serif;
+}
+.header {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
-  }
-  
-  .header__img {
+}
+.header__image {
     width: 100%;
-  }
-  
-  .header__more-inf {
+}
+.header__link {
     font-family: fantasy, cursive;
-  }
+}
+
+@media (max-width:768px) {
   
-  @media (max-width:768px) {
-  
-    .header {
-      text-align: center;
+    .header { 
+       text-align: center;
     }
-    
-  }
-  
-  .main {
+
+}
+.main {
     display: block;
     width: 500px;
     margin: 0 auto 0;
-  }
-  
-  .wrapper__add-task,
-  .task-input,
-  .task-name {
+}
+.tasks__input_new-task, 
+.tasks__label,
+.tasks__input_text {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
-  }
-  
-  .wrapper {
+}
+.task-row-wrapper {
     display: flex;
-  }
-  
-  ul {
+}
+.tasks__list {
     margin: 0;
     padding: 0px;
-  }
-  
-  li,
-  h3 {
+}
+.tasks__item, 
+.tasks__title {
     list-style: none;
-  }
-  
-  input,
-  button {
+}
+.tasks__input, 
+.button{
     outline: none;
-  }
-  
-  .wrapper__add-btn,
-  .edit-btn,
-  .delete-btn {
+}
+.button {
     background: none;
     border: 0px;
     color: #888;
     font-size: 15px;
     width: 60px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     cursor: pointer;
-  }
-  
-  .add-btn:hover,
-  .edit-btn:hover,
-  .delete-btn:hover {
+}
+.button:hover {
     color: #3a3a3a;
-  }
-  
-  /* Heading */
-  .title {
+}
+/* Heading */
+.tasks__title,
+.label__title{
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -88,93 +73,89 @@
     padding: 30px 0 10px;
     margin: 0;
     text-transform: uppercase;
-  }
-  
-  #new-task,
-  .task-input {
+}
+.tasks__input_text,
+.tasks__input_new-task {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
     height: 21px;
     padding: 0 9px;
-    border: 1px solid #dDd;
-    background: #FFF;
+    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 6px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     color: #888;
-  }
-  
-  .task-input:focus,
-  #new-task:focus {
+}
+.tasks__input_text:focus,
+.tasks__input_new-task:focus{
     color: #333;
-  }
-  
-  /* New Task */
-  .title {
+}
+
+/* New Task */
+.label__title {
     display: block;
     margin: 0 0 20px;
-  }
-  
-  #new-task {
+}
+.tasks__input_new-task {
     width: 318px;
-  }
-  
-  /* Task list */
-  .list,
-  .edit-mode {
+}
+
+/* Task list */
+.tasks__item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  * {
+}
+.tasks__input,
+.tasks__label,
+.button {
     vertical-align: middle;
-  }
-  
-  .task-checkbox {
+}
+
+.tasks__input_checkbox {
     margin: 0 10px;
-  }
-  
-  .task-name {
+}
+.tasks__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
-  }
-  
-  .task-input {
-    width: 226px;
-  }
-  
-  .delete-btn .img {
+}
+.tasks__input_text,
+.tasks__input_new-task {
+    width: 226px
+}
+.button__image_delete {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
-  }
-  
-  .delete-btn .img:hover {
+}
+.button__image_delete:hover {
     transform: rotateZ(0);
-  }
-  
-  /* Completed */
-  #completed-tasks .task-name {
+}
+
+/* Completed */
+.tasks__list_completed 
+.tasks__label {
     text-decoration: line-through;
     color: #888;
-  }
-  
-  /* Edit Task */
-  .task-input {
-    display: none;
-  }
-  
-  .edit-mode .task-input {
+}
+
+/* Edit Task */
+.tasks__input_text {
+    display: none
+}
+
+.tasks__item_edit-mode .tasks__input_text {
     display: inline-block;
-    width: 224px;
-  }
-  
-  .edit-mode .task-name {
+    width: 224px
+}
+
+.tasks__item_edit-mode .tasks__label {
     display: none;
-  }
+}
